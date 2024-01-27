@@ -33,8 +33,20 @@ public class Main {
     public static void userInputs() {
         Scanner console = new Scanner(System.in);
 
-        System.out.println("How many grade categories? ");
-        int categories = console.nextInt();
+        int categories = 0;
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.print("Enter how many categories: ");
+
+            if (console.hasNextDouble()) {
+                categories = console.nextInt();
+                validInput = true;
+            } else {
+                System.out.println("Invalid input. Please enter a valid integer.");
+                console.next(); // Consume the invalid input to avoid an infinite loop
+            }
+        }
 
         double totalWeight = 0;
         double remainingWeight = 0;
@@ -49,11 +61,36 @@ public class Main {
             System.out.println(i + " Assignment:");
             String assignment = console.nextLine();
             console.nextLine();
-            System.out.println("Grade");
-            double grade = console.nextDouble();
 
-            System.out.println("Weight");
-            double weight = console.nextDouble();
+            double grade = 0;
+            boolean validInput2 = false;
+
+            while (!validInput2) {
+                System.out.print("Grade: ");
+
+                if (console.hasNextDouble()) {
+                    grade = console.nextDouble();
+                    validInput2 = true;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid integer.");
+                    console.next(); // Consume the invalid input to avoid an infinite loop
+                }
+            }
+
+            double weight = 0;
+            boolean validInput3 = false;
+
+            while (!validInput3) {
+                System.out.print("Weight: ");
+
+                if (console.hasNextDouble()) {
+                    weight = console.nextDouble();
+                    validInput3 = true;
+                } else {
+                    System.out.println("Invalid input. Please enter a valid integer.");
+                    console.next(); // Consume the invalid input to avoid an infinite loop
+                }
+            }
 
             totalWeight += weight;
             totalWeightedPtsEarned += (weight / 100 * grade);
