@@ -1,0 +1,95 @@
+body{
+    background-color: #FF7F50;
+    font-family: 'poppins', sans-serif;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.topContainer{
+    width: 100%;
+    height: auto;
+}
+
+.topContainer h1{
+    font-size: 64px;
+    width: 100%;
+    height: auto;
+}
+
+.topContainer p{
+    font-size: 20px;
+}
+
+.bottomContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBox, .rightBox{
+    flex: 1;
+    height: auto;
+}
+
+
+/*Grade Container*/
+
+.gradeConHeadings{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+}
+.gradeConHeadings h1 {
+    font-size: 30px;
+}
+
+
+
+.gradeBox{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 2rem;
+    }
+
+.grid-item {
+        background-color: #FFA07A;
+        /* Light Orange as example */
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: center;
+        width: 10rem;
+        }
+
+.grid-input {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+.buttonB{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.gradeContainer button{
+    background-color: transparent;
+    width: auto;
+    height: 3rem;
+    border-width: .3rem;
+    border-radius: 20%;
+
+    font-size: 24px;
+    font-weight: bold;
+}
