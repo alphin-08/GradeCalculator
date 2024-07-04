@@ -3,34 +3,35 @@ body{
     font-family: 'poppins', sans-serif;
 }
 
-.mainContainer{
+.mainContainer, .mainContainer2{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
 }
 
-.topContainer{
+.topContainer, .topContainer2{
     width: 100%;
     height: auto;
 }
 
-.topContainer h1{
+.topContainer h1, .topContainer2 h1{
     font-size: 64px;
     width: 100%;
     height: auto;
 }
 
-.topContainer p{
+.topContainer p, .topContainer2 p{
+    width: 30%;
     font-size: 20px;
 }
 
-.bottomContainer{
+.bottomContainer, .bottomContainer2{
     display: flex;
     flex-direction: row;
 }
 
-.leftBox, .rightBox{
+.leftBox, .rightBox, .leftBox2, .rightBox2{
     flex: 1;
     height: auto;
 }
@@ -39,18 +40,14 @@ body{
 /*Grade Container*/
 
 .gradeConHeadings{
-    display: flex;
-    flex-direction: row;
-    gap: 3%;
-}
-.gradeConHeadings h1 {
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 
 
 .gradeBox{
-    width: 75%;
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -58,24 +55,37 @@ body{
     }
 
 .grid-item {
-        background-color: #FFA07A;
+        background-color: transparent;
         /* Light Orange as example */
-        border: 1px solid #ccc;
-        padding: 5px;
+        /* border: 1px solid #ccc; */
+        /* padding: .5rem; */
         text-align: center;
         width: 10rem;
         }
 
 .grid-input {
-    width: 50%;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
     border: none;
-    padding: 5px;
+    padding: .4rem;
     text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
+.grid-input:hover, .grid-input2:hover{
+    box-shadow: 10px 10px 5px black;
+}
 
+.gradeConHeadings2 .grid-input2, .leftBox2 .grid-input2{
+    width: 10%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: .4rem;
+    text-align: center;
+}
 
 .buttonB{
     display: flex;
@@ -83,7 +93,7 @@ body{
     gap: 5%;
 }
 
-.gradeContainer button{
+.gradeContainer button, .leftBox2 button{
     background-color: transparent;
     width: auto;
     height: 3rem;
@@ -92,4 +102,9 @@ body{
 
     font-size: 24px;
     font-weight: bold;
+}
+
+.gradeContainer2{
+    display: flex;
+    flex-direction: column;
 }

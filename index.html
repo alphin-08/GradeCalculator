@@ -27,13 +27,10 @@
 
                 <div class = "leftBox">
                     <div class = "gradeContainer">
-                            <div class = "gradeConHeadings">
-                                <h1>Assignment/Exam</h1>
-                                <h1>Grade</h1>
-                                <h1>Weight</h1>
-                            </div>
-
                             <div class = "gradeBox">
+                                <div class="gradeConHeadings">Assignments/Exam</div>
+                                <div class="gradeConHeadings">Grade</div>
+                                <div class="gradeConHeadings">Weight</div>
                                 <div class="grid-item"><input type="text" class="grid-input"></div>
                                 <div class="grid-item"><input type="text" class="grid-input"></div>
                                 <div class="grid-item"><input type="text" class="grid-input"></div>
@@ -61,8 +58,10 @@
                             </div>
 
 
-                            <h1>Final Grade Goal</h1>
-                            <h1>Weight of Remaining Tasks</h1>
+                            <div class="gradeConHeadings2">
+                                <h1>Final Grade Goal: <input type="text" class="grid-input2"></h1>
+                                <h1>Weight of Remaining Tasks: <input type="text" class="grid-input2"></h1>
+                            </div>
 
                             <div class = "buttonB">
                                 <button>Calculate</button>
@@ -85,6 +84,33 @@
 
     </section>
 
+    <section id = "secondPage">
+        <div class=" mainContainer2">
+            <div class="topContainer2">
+                <h1>Final Grade Calculator</h1>
+                <p>Start by entering the different categories along with the respective grade and its weight</p>
+            
+            </div>
+            
+            <div class="bottomContainer2">
+                <div class="leftBox2">
+                    <div class="gradeContainer2">
+                        <h1>Your current grade: <input type="text" class="grid-input2"></h1>
+                        <h1>The grade you want: <input type="text" class="grid-input2"></h1>
+                        <h1>Your final is worth: <input type="text" class="grid-input2"></h1>
+                    </div>
+
+                    <div class="buttonB">
+                        <button>Calculate</button>
+                        <button>Clear</button>
+                    </div>
+                </div>
+
+                <div class="rightBox2">
+
+                </div>
+        </div>
+    </section>
 
 
 </body>
