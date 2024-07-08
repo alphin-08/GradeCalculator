@@ -13,6 +13,32 @@
 
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/grade/calculate',
+                    data: JSON.stringify({
+                        assignments: [
+                            { name: $('#assignment1').val(), grade: parseFloat($('#grade1').val()), weight: parseFloat($('#weight1').val()) },
+                            // Add more assignments as needed
+                        ],
+                        finalGradeGoal: parseFloat($('#finalGradeGoal').val())
+                    }),
+                    contentType: 'application/json',
+                    success: function (response) {
+                        $('#result').text(response);
+                    },
+                    error: function () {
+                        $('#result').text('Error calculating grade.');
+                    }
+                });
+            });
+        });
+    </script>
     
     <section id = "frontPage">
         <div class = "mainContainer">
@@ -73,7 +99,7 @@
 
                 <div class = "rightBox">
                     <div class = "ouputBox">
-
+                        <p id="result"></p>
                     </div>
                 </div>
 
