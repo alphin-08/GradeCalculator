@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
     <link rel="stylesheet" href="gradeCal.css">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,33 +14,6 @@
 
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('form').submit(function (event) {
-                event.preventDefault();
-                $.ajax({
-                    type: 'POST',
-                    url: '/grade/calculate',
-                    data: JSON.stringify({
-                        assignments: [
-                            { name: $('#assignment1').val(), grade: parseFloat($('#grade1').val()), weight: parseFloat($('#weight1').val()) },
-                            // Add more assignments as needed
-                        ],
-                        finalGradeGoal: parseFloat($('#finalGradeGoal').val())
-                    }),
-                    contentType: 'application/json',
-                    success: function (response) {
-                        $('#result').text(response);
-                    },
-                    error: function () {
-                        $('#result').text('Error calculating grade.');
-                    }
-                });
-            });
-        });
-    </script>
-    
     <section id = "frontPage">
         <div class = "mainContainer">
             <div class = "topContainer">
@@ -54,44 +28,44 @@
                 <div class = "leftBox">
                     <div class = "gradeContainer">
                             <div class = "gradeBox">
-                                <div class="gradeConHeadings">Assignments/Exam</div>
+                                <div class="gradeConHeadings" >Assignments/Exam</div>
                                 <div class="gradeConHeadings">Grade</div>
                                 <div class="gradeConHeadings">Weight</div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
-                                <div class="grid-item"><input type="text" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName1" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade1" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight1" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName2" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade2" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight2" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName3" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade3" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight3" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName4" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade4" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight4" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName5" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade5" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight5" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName6" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade6" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight6" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="assignmentName7" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade7" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight7"class="grid-input"></div>
+                                <div class="grid-item"><input type="text"id="assignmentName8" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="grade8" class="grid-input"></div>
+                                <div class="grid-item"><input type="text" id="weight8"class="grid-input"></div>
                             </div>
 
 
                             <div class="gradeConHeadings2">
-                                <h1>Final Grade Goal: <input type="text" class="grid-input2"></h1>
-                                <h1>Weight of Remaining Tasks: <input type="text" class="grid-input2"></h1>
+                                <h1>Final Grade Goal: <input type="text" id="finalGradeGoal" class="grid-input2"></h1>
+                                <h1>Weight of Remaining Tasks: <input type="text" id="remainingWeight" class="grid-input2"></h1>
                             </div>
 
                             <div class = "buttonB">
-                                <button>Calculate</button>
-                                <button>Clear</button>
+                                <button onclick="calculateGrade()">Calculate</button>
+                                <button type="button" onclick="clearInputs()">Clear</button>
                             </div>
 
                     </div>
@@ -99,7 +73,7 @@
 
                 <div class = "rightBox">
                     <div class = "ouputBox">
-                        <p id="result"></p>
+                        <p id="result" class = "resultBox"></p>
                     </div>
                 </div>
 
@@ -138,6 +112,6 @@
         </div>
     </section>
 
-
+    <script src="gradeCalculator.js"></script>
 </body>
 </html>

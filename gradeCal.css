@@ -31,37 +31,41 @@ body{
     flex-direction: row;
 }
 
-.leftBox, .rightBox, .leftBox2, .rightBox2{
-    flex: 1;
+.leftBox,.leftBox2{
+    flex-basis: 55%;
+    height: auto;
+}
+
+.rightBox, .rightBox2{
+    flex-basis: 45%;
     height: auto;
 }
 
 
 /*Grade Container*/
 
+.gradeContainer{
+    width: 100%;
+}
+
 .gradeConHeadings{
     font-size: 25px;
     font-weight: bold;
 }
 
-
-
 .gradeBox{
-    width: 70%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    gap: 2rem;
-    }
+    gap: 1rem;
+}
 
 .grid-item {
-        background-color: transparent;
-        /* Light Orange as example */
-        /* border: 1px solid #ccc; */
-        /* padding: .5rem; */
-        text-align: center;
-        width: 10rem;
-        }
+    background-color: transparent;
+    text-align: center;
+    width: 50%;
+    }
 
 .grid-input {
     width: 100%;
@@ -107,4 +111,9 @@ body{
 .gradeContainer2{
     display: flex;
     flex-direction: column;
+}
+
+/*Screen result*/
+.resultBox{
+    font-size: 2rem;
 }
