@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     width: 100%;
     height: auto;
+    margin-bottom: 10%;
 }
 
 .topContainer, .topContainer2{
@@ -119,6 +120,6 @@ body{
     font-size: 2rem;
 }
 
-#secondPage{
+/* #secondPage{
     margin-top: 5%;
-}
+} */

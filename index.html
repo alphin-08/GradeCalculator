@@ -95,19 +95,19 @@
             <div class="bottomContainer2">
                 <div class="leftBox2">
                     <div class="gradeContainer2">
-                        <h1>Your current grade: <input type="text" class="grid-input2"></h1>
-                        <h1>The grade you want: <input type="text" class="grid-input2"></h1>
-                        <h1>Your final is worth: <input type="text" class="grid-input2"></h1>
+                        <h1>Your current grade: <input type="text" id="currentGrade" class="grid-input2"></h1>
+                        <h1>The grade you want: <input type="text" id="desiredGrade" class="grid-input2"></h1>
+                        <h1>Your final is worth: <input type="text" id="finalWorth" class="grid-input2"></h1>
                     </div>
 
                     <div class="buttonB">
-                        <button>Calculate</button>
-                        <button>Clear</button>
+                        <button onclick="calculateFinalGrade()">Calculate</button>
+                        <button type="button" onclick="clearSecondPageInputs()">Clear</button>
                     </div>
                 </div>
 
                 <div class="rightBox2">
-
+                    <p id="result2" class="resultBox"></p>
                 </div>
         </div>
     </section>

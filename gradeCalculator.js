@@ -70,5 +70,17 @@ function clearSecondPageInputs() {
 
 
 function calculateFinalGrade() {
-   
+    var currentGrade = parseFloat(document.getElementById('currentGrade').value);
+    var desiredGrade = parseFloat(document.getElementById('desiredGrade').value);
+    var finalWorth = parseFloat(document.getElementById('finalWorth').value);
+
+    if (isNaN(currentGrade) || isNaN(desiredGrade) || isNaN(finalWorth)) {
+        alert("Please enter valid numbers for all fields.");
+        return;
+    }
+
+    var finalGradeNeeded = (desiredGrade - (currentGrade * (1 - finalWorth / 100))) / (finalWorth / 100);
+
+    var resultElement = document.getElementById('result2');
+    resultElement.textContent = "You need to score " + finalGradeNeeded.toFixed(2) + " on the final to achieve a final grade of " + desiredGrade.toFixed(2);
 }
