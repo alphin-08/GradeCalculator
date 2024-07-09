@@ -32,6 +32,13 @@ function calculateGrade() {
 
     var resultElement = document.getElementById('result');
 
+
+    /*Weight sometimes can go beyond 100 depending on the professor*/
+    // if (totalWeight > 100) {
+    //     resultElement.textContent = "Invalid, total weight went above 100%";
+    //     return;
+    // }
+
     if (gradeNeeded > 0) {
         resultElement.textContent = "A grade of " + gradeNeeded.toFixed(2) + " is needed for the remaining " +
             remainingWeight.toFixed(2) + " of tasks to achieve a final grade of " + finalGradeGoal.toFixed(2);

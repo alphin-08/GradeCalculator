@@ -1,5 +1,6 @@
 body{
-    background-color: #FF7F50;
+    /* background-color: rgb(158, 68, 16); */
+    background: linear-gradient(to right, #8B4513, #B8860B, #8B4513);
     font-family: 'poppins', sans-serif;
 }
 
@@ -116,4 +117,8 @@ body{
 /*Screen result*/
 .resultBox{
     font-size: 2rem;
+}
+
+#secondPage{
+    margin-top: 5%;
 }
