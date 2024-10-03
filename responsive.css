@@ -70,11 +70,14 @@
 }
 
 @media (max-width: 480px) {
-    .topContainer h1,
-        .topContainer2 h1 {
+        .topContainer h1, .topContainer2 h1 {
             font-size: 1rem;
             margin-top: 1rem;
             margin-bottom: 0.5rem;
+        }
+
+        .topContainer p,.topContainer2 p {
+            font-size: 0.9rem !important;
         }
 
         .gradeConHeadings{
@@ -82,7 +85,13 @@
             margin-bottom: 0.5rem;
             text-align: center;
         }
-    
+        .gradeConHeadings2 h1{
+            font-size: 1rem;
+        }
+
+        .gradeContainer2 h1{
+            font-size: 1.2rem;
+        }
         .topContainer p,
         .topContainer2 p {
             width: 100%;
@@ -104,7 +113,7 @@
         .gradeBox {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
-            gap: 0.1rem;
+            gap: 0.5rem;
         }
     
         .grid-item {
@@ -154,4 +163,101 @@
             background-color: #B8860B;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
+}
+
+@media (max-width: 350px) {
+
+    .topContainer h1, 
+    .topContainer2 h1 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .topContainer p,
+    .topContainer2 p {
+        font-size: 1rem !important;
+    }
+
+    .gradeConHeadings {
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+    }
+
+    .gradeConHeadings2 h1 {
+        font-size: 0.8rem;
+    }
+
+    .topContainer p,
+    .topContainer2 p {
+        width: 100%;
+        font-size: 0.2rem;
+    }
+
+    .bottomContainer,
+    .bottomContainer2 {
+        flex-direction: column;
+    }
+
+    .leftBox,
+    .rightBox,
+    .leftBox2,
+    .rightBox2 {
+        flex-basis: 100%;
+    }
+
+    .gradeBox {
+        display: grid;
+        flex-direction: 1fr;
+        gap: 0.5rem;
+    }
+
+    .gradeBox .grid-item:nth-child(1),.gradeBox .grid-item:nth-child(2),.gradeBox .grid-item:nth-child(3){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gradeBox .grid-item:nth-child(n+4){
+        grid-template-columns: 1fr;
+    }
+
+    .buttonB {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .gradeContainer button,
+    .leftBox2 button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .gradeContainer button,
+    .leftBox2 button {
+        background-color: #8B4513;
+        color: white;
+        width: 110px;
+        height: 1rem;
+        border: none;
+        border-width: 0.1rem;
+        border-radius: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: .5rem;
+        text-align: center;
+        padding: 1rem 0.2rem;
+        margin: 1rem auto;
+        cursor: pointer;
+    }
+
+    .gradeContainer button:hover,
+    .leftBox2 button:hover {
+        background-color: #B8860B;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .resultBox {
+        font-size: 1rem;
+    }
 }

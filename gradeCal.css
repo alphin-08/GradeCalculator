@@ -100,14 +100,25 @@ body{
 }
 
 .gradeContainer button, .leftBox2 button{
-    background-color: transparent;
-    width: auto;
-    height: 3rem;
-    border-width: .3rem;
-    border-radius: 20%;
-
-    font-size: 24px;
+    background-color: #8B4513;
+    color: white;
+    width: 200px;
+    height: 4rem;
+    border: none;
+    border-width: 0.1rem;
+    border-radius: 0;
+    font-size: 1rem;
+    cursor: pointer;
     font-weight: bold;
+    text-align: center;
+    padding: 1rem 0.2rem;
+    cursor: pointer;
+}
+
+.gradeContainer button:hover,
+.leftBox2 button:hover {
+    background-color: #B8860B;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .gradeContainer2{
