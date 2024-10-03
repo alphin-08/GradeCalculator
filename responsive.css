@@ -1,0 +1,29 @@
+@media (max-width: 768px){
+
+
+    .topContainer h1, .topContainer2 h1{
+        font-size: 3rem;
+    }
+
+    .topContainer p, .topContainer2 p{
+        width: 100%;
+        font-size: 1.125rem;
+    }
+
+    .bottomContainer, .bottomContainer2{
+        flex-direction: column;
+    }
+
+    .leftBox, .rightBox, .leftBox2, .rightBox2{
+        flex-basis: 100%;
+    }
+
+    .gradeBox{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .grid-item{
+        width:100%;
+    }
+}
