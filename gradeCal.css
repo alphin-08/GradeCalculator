@@ -104,9 +104,9 @@ body{
     color: white;
     width: 200px;
     height: 4rem;
-    border: none;
-    border-width: 0.1rem;
-    border-radius: 0;
+    border: 2px solid black;
+    border-width: 0.2rem;
+    border-radius: 1rem;
     font-size: 1rem;
     cursor: pointer;
     font-weight: bold;

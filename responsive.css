@@ -136,10 +136,6 @@
             font-size: 1rem;
         }
     
-        .resultBox {
-            font-size: 0.5rem;
-        }
-    
         .gradeContainer button,
         .leftBox2 button {
             background-color: #8B4513;
@@ -151,7 +147,7 @@
             border-radius: 0;
             font-size: 1rem;
             font-weight: bold;
-            line-height: .5rem;
+            line-height: 0.2rem;
             text-align: center;
             padding: 1rem 0.2rem;
             margin: 1rem auto;
@@ -162,6 +158,10 @@
         .leftBox2 button:hover {
             background-color: #B8860B;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .resultBox {
+            font-size: 1rem;
         }
 }
 
@@ -244,7 +244,7 @@
         border-radius: 0;
         font-size: 1rem;
         font-weight: bold;
-        line-height: .5rem;
+        line-height: 0.1rem;
         text-align: center;
         padding: 1rem 0.2rem;
         margin: 1rem auto;
